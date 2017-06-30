@@ -1,9 +1,11 @@
 // #1 Create a var called 'up' that says 'down'
 
+var up = "down";
 
 
 // #2 Use the var iHeart to create a new var called iHeartJavascript that says 'I heart javascript'
-var iHeart = 'I heart';
+var iHeart = 'I heart'
+var iHeartJavascript = 'I heart javascript'
 
 // #3  Make an object called developer
 // developer has a title of Junior (String)
@@ -12,6 +14,16 @@ var iHeart = 'I heart';
 // developer is not billGates (boolean)
 // developer likes isolation, caffeine, and pizza (array of strings)
 
+var developer = {
+	title: "Junior",
+	salary: 55000,
+	laptop: {type: 'Macbook', year: 2016},
+	billGates: false,
+	likes: ['isolation','caffeine', 'pizza']
+
+};
+
+
 
 // #4 Change my dog's name to Fido using dot notation
 var myDog = {
@@ -19,16 +31,26 @@ var myDog = {
 	name: 'Spot'
 };
 
+myDog.name = 'Fido'
+
 // Change my don't type to hairless using square bracket notation
 var myOtherDog = {
 	type: 'poodle',
 	name: 'Fluffy'
 };
 
+myOtherDog["type"] = 'hairless'
+
+
 // #5 Create an object that tracks a count of kids in each grade in a school.  Call it 'school'
 // The key should be the grade (string) and the value should be how many kids there are.
 // Our school has 50 kids in first, 30 kids in second and 80 kids in third
 
+var school = {
+	first: 50,
+	second: 30,
+	third: 80
+};
 
 
 // #6 Loop through this object and change every property that begins with the word 'secret' to have a value of 'redacted'
@@ -38,19 +60,31 @@ var briefing = {
 	nonsecretCodename: 'purple hippopotamus',
 	secretInfo: "it's gon' be cold",
   date: 'future',
-};
+}
+
+ for (var key in briefing) {
+
+ }
 
 
 // #7 Create an array of strings that are the 7 days of the week. Call your array daysOfWeek
+var daysOfWeek = [
+	"Sunday",
+	"Monday",
+	"Tuesday",
+	"Wednesday",
+	"Thursday",
+	"Friday",
+	"Saturday"
+];
 
 // #8 Using this array do the following
-var jedi = ['Yoda', 'Mace Windu', 'Obi-Wan'];
+
 // add 'Luke' to the end
 
 // remove 'Yoda' and store him in a var called firstJedi
 
 // add 'Mario' to the start of the array
-
 // remove 'Obi-Wan' from the array and store him in a var called secondJedi
 
 // leave 'Mace Windu' in the array but put a copy of him on a var called thirdJedi
@@ -61,12 +95,18 @@ var jedi = ['Yoda', 'Mace Windu', 'Obi-Wan'];
 // #9 Write a function called cutInLine, that takes in an array and an item, and adds the item
 // after the first item in the array and return the array
 // EX: cutInLine([1,2,3,4], 8) => [1,8,2,3,4];
+var numbers = [1,2,3,4,5]
+
 
 
 // #10 Write a function called removeThings, that takes in an array of things (strings or numbers), and a 'thing' (a string or a number).
 // Removes all instances of that 'thing' from the array. And return the modified array.
 // The order of the array should not be changed
 // removeThings(['a', 1, 4, 'a'], 'a') => [1,4]
+var removeThings = [5, 6, 7, 8, "red", 9]
+var removed = removeThings.splice("red");
+
+console.log(removeThings)
 
 
 // #11 Write a function tripleTheFun that takes 1 parameter: a number or a string. It triples numbers, and
